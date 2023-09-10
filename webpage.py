@@ -1,13 +1,18 @@
 from taipy.gui import Gui, navigate
 
 
-root_md="<|menu|label=Menu|lov={[('Page-1', 'Page 1'), ('About-Us', 'About Us')]}|on_action=on_menu|>"
+root_md="<|menu|label=Menu|lov={[('Add-Station', 'Add Station'), ('About-Us', 'About Us')]}|on_action=on_menu|>"
 enter_details = "Enter any details here..."
+
+def reset_box():
+    enter_details = "Enter any details here..."
+
+
 page1_md= """
 
-# Welcome to Where's My Water?
+# Where's My Water?
 
-<|{"Wharton Campus.png"}|image|width="1000px"|height="1000px"|>
+<|{"WhartonCampus.png"}|image|width="1000px"|height="1000px"|>
 
 ## Add a Fountain
 
@@ -15,7 +20,7 @@ page1_md= """
 
 <|{enter_details}|input|>
 #
-<|Submit|button|>
+<|Submit|button|on_action=reset_box|>
 
 ### Status ###
 
