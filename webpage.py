@@ -56,7 +56,7 @@ def on_menu(state, var_name, function_name, info):
 
 pages = {
     "/": root_md,
-    "Page-1": page1_md,
+    "Add-Station": page1_md,
     "About-Us": page2_md
 }
 
