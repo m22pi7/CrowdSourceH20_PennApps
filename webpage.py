@@ -3,7 +3,7 @@ from taipy.gui import Gui, navigate
 
 root_md="<|menu|label=Menu|lov={[('Page-1', 'Page 1'), ('Page-2', 'Page 2')]}|on_action=on_menu|>"
 page1_md="## This is page 1"
-page2_md="## This is page 2"
+page2_md="## This is page 4"
 
 
 def on_menu(state, var_name, function_name, info):
@@ -17,4 +17,4 @@ pages = {
     "Page-2": page2_md
 }
 
-Gui(pages=pages).run()
+Gui(pages=pages).run(use_reloader=True)
